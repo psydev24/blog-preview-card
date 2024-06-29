@@ -64,8 +64,7 @@ main {
   box-shadow: 8px 8px #000;
 }
 
-.card .card-illustration {
-  overflow: hidden;
+.card .card-illustration img {
   border-radius: 10px;
 }
 
