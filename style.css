@@ -22,7 +22,109 @@
   --font-color-secondary: hsl(0, 0%, 50%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Figtree;
+  font-weight: 500;
+}
+
+.card {
+  width: min(85%, 327px);
+  display: flex;
+  border: 1px solid #000;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--secondary);
+  font-size: 1rem;
+  border-radius: 20px;
+  box-shadow: 8px 8px #000;
+}
+
+.card .card-illustration {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  line-height: 1.5;
+  --size-m: 14px;
+  --size-s: 12px;
+}
+
+.text-container .card-category {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: var(--size-s);
+  width: fit-content;
+  background-color: var(--primary);
+}
+.text-container .card-timestamp {
+  font-size: var(--size-s);
+}
+
+.text-container .card-title {
+  font-size: 1.25rem;
+}
+
+.text-container .card-text {
+  width: 100%;
+  font-size: var(--size-m);
+  color: var(--font-color-secondary);
+}
+
+.card .card-author {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.card .card-author img {
+  aspect-ratio: 1;
+  width: max(32px, 2rem);
+}
+
+.card .card-author figcaption {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 384px;
+  }
+  .text-container .card-title {
+    font-size: 1.5rem;
+  }
+  .text-container {
+    --size-s: 14px;
+    --size-m: 16px;
+  }
 }
