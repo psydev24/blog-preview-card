@@ -92,6 +92,7 @@ main {
 
 .text-container .card-title {
   font-size: 1.25rem;
+  font-weight: 800;
 }
 
 .text-container .card-text {
@@ -108,6 +109,7 @@ main {
 
 .card .card-author img {
   aspect-ratio: 1;
+  border-radius: 10px;
   width: max(32px, 2rem);
 }
 
